@@ -16,7 +16,7 @@ function AddFeedback() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("https://feedback-exitexam.onrender.com", form);
+    await axios.post(`https://feedback-exitexam.onrender.com`, form);
    
     alert("Feedback added!");
     setForm({
