@@ -7,7 +7,7 @@ function Dashboard() {
   const [editData, setEditData] = useState({});
 
   const fetchFeedbacks = async () => {
-    const res = await axios.get(`https://feedback-exitexam.onrender.com`);
+    const res = await axios.get("https://feedback-exitexam.onrender.com");
 
    
     setFeedbacks(res.data);
