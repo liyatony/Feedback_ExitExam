@@ -7,7 +7,7 @@ function Dashboard() {
   const [editData, setEditData] = useState({});
 
   const fetchFeedbacks = async () => {
-    const res = await axios.get("http://localhost:5000/api/feedback");
+    const res = await axios.get("https://feedback-exitexam.onrender.com");
     setFeedbacks(res.data);
   };
 
@@ -16,7 +16,7 @@ function Dashboard() {
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/feedback/${id}`);
+    await axios.delete(`https://feedback-exitexam.onrender.com${id}`);
     fetchFeedbacks();
   };
 
@@ -26,7 +26,7 @@ function Dashboard() {
   };
 
   const handleUpdate = async () => {
-    await axios.put(`http://localhost:5000/api/feedback/${editId}`, editData);
+    await axios.put(`https://feedback-exitexam.onrender.com${editId}`, editData);
     setEditId(null);
     fetchFeedbacks();
   };
